@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Minimalist Youtube",
+  "$schema": "https://json.schemastore.org/chrome-manifest.json",
+  "version": "1.0",
+  "description": "A Chrome extension that makes Youtube minimalistic",
+  "icons": {
+    "16": "icons/icon_16.png",
+    "32": "icons/icon_32.png",
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  },
+  "action": {
+    "default_title": "Minimalist Youtube"
+  },
+  "permissions": ["webRequest"],
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "all_frames": true,
+      "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+      "js": ["/contentScript.js"]
+    }
+  ]
+}
