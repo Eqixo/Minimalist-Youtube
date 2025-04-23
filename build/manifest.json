@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Minimalist Youtube",
   "$schema": "https://json.schemastore.org/chrome-manifest.json",
   "version": "1.0",
@@ -10,10 +10,7 @@
     "48": "icons/icon_48.png",
     "128": "icons/icon_128.png"
   },
-  "action": {
-    "default_title": "Minimalist Youtube"
-  },
-  "permissions": ["webRequest"],
+  "permissions": ["webRequest", "webNavigation"],
   "content_scripts": [
     {
       "run_at": "document_start",
